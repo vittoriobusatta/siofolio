@@ -16,7 +16,7 @@ function Home() {
         <meta property="og:image" content="/favicon.ico" />
         <meta property="og:url" content="https://www.example.com" />
       </Head>
-      <section className="landing">
+      <section className="homepage">
         <svg
           width="698"
           height="280"

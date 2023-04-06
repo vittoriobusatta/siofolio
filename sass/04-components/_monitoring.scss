@@ -21,6 +21,7 @@
     display: inline-flex;
     justify-content: space-between;
     flex-direction: column;
+    transition: background-color 0.3s ease;
     @media screen and (max-width: 1500px) {
       padding: 62px 44px;
     }
@@ -32,11 +33,22 @@
       width: 100%;
       padding: 44px 26px;
     }
+    &:hover {
+      background: url("../../public//Image.png") no-repeat center center $primaryColor;
+      & h2,
+      span,
+      p {
+        color: $backgroundColor;
+      }
+      & svg path {
+        fill: $backgroundColor;
+      }
+    }
     & h2 {
       font-family: "Manrope", sans-serif;
       font-weight: 800;
       font-size: 42px;
-      padding: 22px 12px 62px 12px;
+      padding: 38px 12px 62px 12px;
       @media screen and (max-width: 1500px) {
         font-size: 34px;
       }
@@ -51,11 +63,9 @@
     & span {
       font-family: "Manrope", sans-serif;
       font-weight: 500;
-      font-size: 18px;
-      text-decoration-line: underline;
-      @media screen and (max-width: 992px) {
-        font-size: 16px;
-      }
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
     }
     & p {
       font-family: "Manrope", sans-serif;

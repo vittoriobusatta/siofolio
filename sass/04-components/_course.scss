@@ -4,10 +4,13 @@
   &__list {
     width: 100%;
     & li {
-      padding: 32px 44px;
+      padding: 32px 62px;
       position: relative;
       transition: background-color 0.3s ease-in-out;
       cursor: pointer;
+      @media screen and (max-width: 1224px) {
+        padding: 32px 44px;
+      }
       @media screen and (max-width: 992px) {
         padding: 32px 22px;
       }
@@ -32,7 +35,8 @@
         }
       }
       &:hover {
-        background-color: $primaryColor;
+        background: url("../../public//Image.png") no-repeat center center
+          $primaryColor;
         & h2 {
           color: $backgroundColor;
           animation: fade 0.4s ease;
@@ -49,7 +53,7 @@
         font-weight: 500;
         font-size: 48px;
         color: $primaryColor;
-        margin-left: 44px;
+        margin-left: 52px;
         @media screen and (max-width: 992px) {
           font-size: 36px;
         }
