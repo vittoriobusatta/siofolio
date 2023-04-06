@@ -126,11 +126,6 @@ function Monitoring() {
     });
   };
 
-  console.log(
-    previewActive,
-    previewIndex,
-  );
-
   return (
     <section className="landing">
       <h1 className="landing__title">Veilles</h1>
