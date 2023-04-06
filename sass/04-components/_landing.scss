@@ -25,5 +25,8 @@
   text-align: center;
   font-family: "New Spirit", sans-serif;
   color: $primaryColor;
-  padding: 25vh 0 0 0;
+  padding-top: 25vh;
+  @media screen and (max-width: 576px) {
+    padding-top: 20vh;
+  }
 }
