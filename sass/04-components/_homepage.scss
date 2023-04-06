@@ -1,0 +1,19 @@
+.homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  --color: #0b632e;
+  &__content {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & svg {
+      width: 100%;
+      padding: 0 26px;
+    }
+  }
+ 
+}

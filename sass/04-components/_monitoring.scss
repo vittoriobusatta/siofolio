@@ -1,10 +1,10 @@
 .monitoring {
   width: 100%;
-  color: $primaryColor;
   padding: 20vh 5vw;
   &__content {
     display: inline-flex;
     justify-content: space-between;
+    color: $primaryColor;
     @media screen and (max-width: 992px) {
       flex-direction: column;
       row-gap: 14vh;
@@ -34,7 +34,8 @@
       padding: 44px 26px;
     }
     &:hover {
-      background: url("../../public//Image.png") no-repeat center center $primaryColor;
+      background: url("../../public//Image.png") no-repeat center center
+        $primaryColor;
       & h2,
       span,
       p {
@@ -85,5 +86,41 @@
         max-width: 22px;
       }
     }
+  }
+  &__preview {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    color: $backgroundColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    &--active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: calc(50% - 75vmax);
+  left: calc(50% - 75vmax);
+  width: 150vmax;
+  height: 150vmax;
+  pointer-events: none;
+  will-change: transform;
+  z-index: 60;
+  transform: rotate(45deg);
+  background: transparent;
+  &__inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: $primaryColor;
+    transform: translateX(-100%);
   }
 }
