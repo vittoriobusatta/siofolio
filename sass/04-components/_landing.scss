@@ -1,0 +1,29 @@
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // min-height: 80vh;
+  // padding: 0 26px;
+  // @media screen and (min-width: 576px) {
+  //   padding: 0 32px;
+  // }
+  // @media screen and (min-width: 768px) {
+  //   padding: 0 42px;
+  // }
+  // @media screen and (min-width: 992px) {
+  //   padding: 0 52px;
+  // }
+  // @media screen and (min-width: 1224px) {
+  //   padding: 0 62px;
+  // }
+}
+
+.landing__title {
+  font-size: min(12vw, 96px);
+  font-weight: 700;
+  text-align: center;
+  font-family: "New Spirit", sans-serif;
+  color: $primaryColor;
+  padding: 25vh 0 0 0;
+}

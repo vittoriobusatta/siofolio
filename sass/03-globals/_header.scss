@@ -1,0 +1,38 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  z-index: 999;
+  font-family: 'New Spirit', sans-serif;
+  padding: 12px 26px;
+  @media screen and (min-width: 576px) {
+    padding: 16px 32px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 16px 42px;
+  }
+  @media screen and (min-width: 992px) {
+    padding: 20px 52px;
+  }
+  @media screen and (min-width: 1224px) {
+    padding: 20px 62px;
+  }
+
+  nav ul {
+    display: inline-flex;
+    column-gap: 44px;
+    li a {
+      font-size: max(1.2rem, 16px);
+      font-weight: 400;
+      text-decoration: none;
+      font-family: "Manrope", sans-serif;
+      color: $primaryColor;
+    }
+  }
+}
+
