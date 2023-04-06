@@ -36,18 +36,21 @@
     @media screen and (max-width: 576px) {
       padding: 34px 20px;
     }
-    &:hover {
-      background: url("../../public//Image.png") no-repeat center center
-        $primaryColor;
-      & h2,
-      span,
-      p {
-        color: $backgroundColor;
-      }
-      & svg path {
-        fill: $backgroundColor;
+    @media screen and (min-width: 992px) {
+      &:hover {
+        background: url("../../public//Image.png") no-repeat center center
+          $primaryColor;
+        & h2,
+        span,
+        p {
+          color: $backgroundColor;
+        }
+        & svg path {
+          fill: $backgroundColor;
+        }
       }
     }
+
     & h2 {
       font-family: "Manrope", sans-serif;
       font-weight: 800;

@@ -34,15 +34,17 @@
           background-color: $primaryColor;
         }
       }
-      &:hover {
-        background: url("../../public//Image.png") no-repeat center center
-          $primaryColor;
-        & h2 {
-          color: $backgroundColor;
-          animation: fade 0.4s ease;
-        }
-        & span {
-          color: $backgroundColor;
+      @media screen and (min-width: 992px) {
+        &:hover {
+          background: url("../../public//Image.png") no-repeat center center
+            $primaryColor;
+          & h2 {
+            color: $backgroundColor;
+            animation: fade 0.4s ease;
+          }
+          & span {
+            color: $backgroundColor;
+          }
         }
       }
     }

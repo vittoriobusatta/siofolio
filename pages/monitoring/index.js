@@ -74,7 +74,7 @@ function Monitoring() {
     title:
       "Intelligence artificielle : enjeux juridiques et protection des travailleurs",
     description:
-    "Cet article aborde les enjeux juridiques de l'utilisation de l'IA dans le monde du travail, tels que la protection de l'emploi, la sécurité et la confidentialité des données personnelles, ainsi que les responsabilités des employeurs et des concepteurs d'IA en cas d'erreurs ou de dommages."
+      "Cet article aborde les enjeux juridiques de l'utilisation de l'IA dans le monde du travail, tels que la protection de l'emploi, la sécurité et la confidentialité des données personnelles, ainsi que les responsabilités des employeurs et des concepteurs d'IA en cas d'erreurs ou de dommages.",
   };
 
   const computerMonitoring = {
@@ -114,17 +114,22 @@ function Monitoring() {
 
   const closePreview = () => {
     setPreviewActive(false);
-    gsap.to(overlayInner.current[previewIndex], {
-      x: "-100%",
+    gsap.to(previewContainer.current[previewIndex], {
       duration: 0.6,
+      opacity: 0,
       onComplete: () => {
-        gsap.to(previewContainer.current[previewIndex], {
+        gsap.to(overlayInner.current[previewIndex], {
+          x: "-100%",
           duration: 0.6,
-          opacity: 0,
         });
       },
     });
   };
+
+  console.log(
+    previewActive,
+    previewIndex,
+  );
 
   return (
     <section className="landing">
