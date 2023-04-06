@@ -30,25 +30,85 @@ const article = ({ array, openPreview }) => {
   );
 };
 
+const preview = ({
+  array,
+  previewContainer,
+  previewActive,
+  previewIndex,
+  index,
+  closePreview,
+}) => {
+  return (
+    <div
+      key={index}
+      className={`monitoring__preview ${
+        previewActive && previewIndex === index
+          ? "monitoring__preview--active"
+          : ""
+      }`}
+      ref={(el) => (previewContainer.current[index] = el)}
+    >
+      <div className="monitoring__preview__head">
+        <span>{array.subtitle}</span>
+        <h2
+          onClick={() => {
+            closePreview();
+          }}
+        >
+          X
+        </h2>
+      </div>
+      <h1>{array.title}</h1>
+    </div>
+  );
+};
+
 function Monitoring() {
   const [previewIndex, setPreviewIndex] = useState(2);
   const [previewActive, setPreviewActive] = useState(false);
   const overlayInner = useRef([]);
+  const previewContainer = useRef([]);
+
+  const legalMonitoring = {
+    subtitle: "Veille Juridique",
+    title:
+      "Intelligence artificielle : enjeux juridiques et protection des travailleurs",
+    description:
+    "Cet article aborde les enjeux juridiques de l'utilisation de l'IA dans le monde du travail, tels que la protection de l'emploi, la sécurité et la confidentialité des données personnelles, ainsi que les responsabilités des employeurs et des concepteurs d'IA en cas d'erreurs ou de dommages."
+  };
+
+  const computerMonitoring = {
+    subtitle: "Veille Informatique",
+    title: "Intelligence artificielle : quels sont les métiers menacés ?",
+    description:
+      "Découvrez les métiers menacés par l'Intelligence Artificielle (IA) et l'automatisation des tâches. Cet article examine les secteurs impactés tels que la production, le commerce de détail et les services. Il se penche aussi sur les métiers qui pourraient être transformés ou améliorés par l'IA.",
+  };
+
+  const array = [computerMonitoring, legalMonitoring];
 
   useEffect(() => {
     gsap.set(overlayInner.current, {
       x: "-100%",
     });
+    gsap.set(previewContainer.current, {
+      x: "0%",
+      opacity: 0,
+    });
   }, []);
 
   const openPreview = (index) => {
-    console.log("index", index);
     setPreviewIndex(index);
     setPreviewActive(true);
-
     gsap.to(overlayInner.current[index], {
       x: 0,
       duration: 0.6,
+      onComplete: () => {
+        gsap.to(previewContainer.current[index], {
+          x: 0,
+          duration: 0.6,
+          opacity: 1,
+        });
+      },
     });
   };
 
@@ -57,27 +117,14 @@ function Monitoring() {
     gsap.to(overlayInner.current[previewIndex], {
       x: "-100%",
       duration: 0.6,
+      onComplete: () => {
+        gsap.to(previewContainer.current[previewIndex], {
+          duration: 0.6,
+          opacity: 0,
+        });
+      },
     });
   };
-
-  const legalMonitoring = {
-    subtitle: "Veille Juridique",
-    title:
-      "Intelligence artificielle : enjeux juridiques et protection des travailleurs",
-    description:
-      "Découvrez les enjeux juridiques majeurs liés à l'utilisation de l'Intelligence Artificielle (IA) dans le monde du travail. Cet article examine les défis auxquels sont confrontés les travailleurs, tels que la protection de l'emploi, la sécurité et la confidentialité des données personnelles. Il se penche également sur les responsabilités des employeurs et des concepteurs d'IA en cas d'erreurs ou de dommages causés par les systèmes automatisés. ",
-  };
-
-  const computerMonitoring = {
-    subtitle: "Veille Informatique",
-    title: "Intelligence artificielle : quels sont les métiers menacés ?",
-    description:
-      "Découvrez les métiers susceptibles d'être menacés par l'Intelligence Artificielle (IA) et l'automatisation croissante des tâches dans cet article. Il examine les secteurs d'activité où l'IA pourrait avoir un impact significatif sur l'emploi, tels que la production manufacturière, le commerce de détail, ou encore le secteur des services. L'article se penche également sur les métiers qui pourraient être transformés ou enrichis par l'utilisation de l'IA.",
-  };
-
-  const array = [computerMonitoring, legalMonitoring];
-
-  console.log("previewIndex", previewIndex, "previewActive", previewActive);
 
   return (
     <section className="landing">
@@ -92,25 +139,14 @@ function Monitoring() {
           })}
         </div>
         {array.map((array, index) => {
-          return (
-            <div
-              key={index}
-              className={`monitoring__preview ${
-                previewActive && previewIndex === index
-                  ? "monitoring__preview--active"
-                  : ""
-              }`}
-            >
-              <h1>{array.title}</h1>
-              <h2
-                onClick={() => {
-                  closePreview();
-                }}
-              >
-                CLOSE
-              </h2>
-            </div>
-          );
+          return preview({
+            array,
+            previewContainer,
+            previewActive,
+            previewIndex,
+            index,
+            closePreview,
+          });
         })}
         <div className="overlay">
           {array.map((item, index) => {
