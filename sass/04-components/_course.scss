@@ -1,5 +1,8 @@
 .course {
   padding-top: 20vh;
+  @media screen and (max-width: 576px) {
+    padding: 12vh 0;
+  }
   width: 100%;
   &__list {
     width: 100%;
