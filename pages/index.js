@@ -43,6 +43,9 @@ function Home() {
             />
           </svg>
         </div>
+        <a className="homepage__download" href="../public/CV.pdf" download>
+          Télécharger le CV
+        </a>
       </section>
     </>
   );

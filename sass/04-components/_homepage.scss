@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  --color: #0b632e;
+  --color: $primaryColor;
   &__content {
     min-height: 90vh;
     display: flex;
@@ -15,5 +15,12 @@
       padding: 0 26px;
     }
   }
- 
+  &__download {
+    color: $primaryColor;
+    text-transform: uppercase;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: clamp(14px,2vw, 16px);
+    text-align: center;
+  }
 }

@@ -30,15 +30,15 @@ function Course() {
         })}
         <ul className="course__list">
           <li>
-            <span>2022</span>
-            <div className="course__list__title">
-              <h2>Stage Développeur Web</h2>
-            </div>
-          </li>
-          <li>
             <span>2023</span>
             <div className="course__list__title">
               <h2>Stage Technicien Réseau</h2>
+            </div>
+          </li>
+          <li>
+            <span>2022</span>
+            <div className="course__list__title">
+              <h2>Stage Développeur Web</h2>
             </div>
           </li>
         </ul>

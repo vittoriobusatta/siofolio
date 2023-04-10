@@ -59,6 +59,16 @@ const preview = ({
         </h2>
       </div>
       <h1>{array.title}</h1>
+      <div>
+        <h2>
+          {array.article ? "1. " + array.article.title : "Pas d'article disponible"}
+        </h2>
+        <p>
+          {array.article
+            ? array.article.description
+            : null}
+        </p>
+      </div>
     </div>
   );
 };
@@ -82,6 +92,12 @@ function Monitoring() {
     title: "Intelligence artificielle : quels sont les métiers menacés ?",
     description:
       "Découvrez les métiers menacés par l'Intelligence Artificielle (IA) et l'automatisation des tâches. Cet article examine les secteurs impactés tels que la production, le commerce de détail et les services. Il se penche aussi sur les métiers qui pourraient être transformés ou améliorés par l'IA.",
+    article: {
+      title:
+        "Les enjeux éthiques de l’utilisation de l’intelligence artificielle ",
+      description:
+        "L’utilisation de l’IA au quotidien soulève de nombreuses questions éthiques étroitement liées au droit car il est le garant de la protection des droits fondamentaux et qu’il est le seul à pouvoir limiter ou interdire certaines pratiques. Aujourd’hui, les risques sont nombreux : injustice algorithmique, systèmes opaques, programmes racistes et sexistes, discriminations, impacts sur le travail, désinformation, atteintes à la vie privée, atteintes à la sécurité, surveillance des utilisateurs. Ces risques sont présents dans de nombreux domaines (environnement, santé, énergie, justice, droit, police, transport, économie et bien d’autres) et touchent, de fait, une grande partie des utilisateurs.",
+    },
   };
 
   const array = [computerMonitoring, legalMonitoring];
@@ -125,6 +141,8 @@ function Monitoring() {
       },
     });
   };
+
+  console.log(array);
 
   return (
     <section className="landing">
