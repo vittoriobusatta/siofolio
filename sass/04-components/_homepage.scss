@@ -22,5 +22,9 @@
     font-weight: 700;
     font-size: clamp(14px,2vw, 16px);
     text-align: center;
+    transition: all 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }

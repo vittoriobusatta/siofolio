@@ -1,0 +1,52 @@
+.certification {
+  width: 100%;
+  padding: 20vh 5vw;
+  &__list {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    & li {
+      $size: 260px;
+      height: $size;
+      width: $size;
+      border: solid 2px $primaryColor;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      & svg path, & svg rect {
+        transition: fill 0.3s ease;
+      }
+      &:hover {
+        background-color: $primaryColor;
+        &:nth-child(1) svg path {
+          fill: $backgroundColor;
+        }
+        &:nth-child(2) svg {
+          fill: $backgroundColor;
+          & path {
+            &:nth-child(1) {
+              fill: $backgroundColor;
+            }
+            &:nth-child(2) {
+              fill: $primaryColor;
+            }
+          }
+        }
+        &:nth-child(3) svg {
+          fill: $backgroundColor;
+          & path {
+            fill: $backgroundColor;
+          }
+          & rect {
+            fill: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+}
