@@ -5,12 +5,22 @@ const marquee = ({ array }) => {
     <div class="marquee">
       <ul class="marquee__content">
         {array.map((array, index) => {
-          return <li key={index}>{array}</li>;
+          return (
+            <>
+              <li key={index}>{array}</li>
+              <div className="marquee__content__line"></div>
+            </>
+          );
         })}
       </ul>
       <ul class="marquee__content" aria-hidden="true">
         {array.map((array, index) => {
-          return <li key={index}>{array}</li>;
+          return (
+            <>
+              <li key={index}>{array}</li>
+              <div className="marquee__content__line"></div>
+            </>
+          );
         })}
       </ul>
     </div>

@@ -81,7 +81,7 @@
 }
 
 .marquee {
-  --gap: 44px;
+  --gap: 32px;
   display: flex;
   overflow: hidden;
   user-select: none;
@@ -94,9 +94,10 @@
     flex-shrink: 0;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     min-width: 100%;
     gap: var(--gap);
-    // animation: scroll 10s linear infinite;
+    animation: scroll 70s linear infinite;
     & li {
       font-weight: 500;
       font-size: 20px;
@@ -106,6 +107,11 @@
       @media screen and (max-width: 576px) {
         font-size: 18px;
       }
+    }
+    &__line {
+      width: 16px;
+      height: 14%;
+      background-color: $backgroundColor;
     }
   }
 }
