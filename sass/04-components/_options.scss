@@ -1,0 +1,39 @@
+.bts {
+  padding: 88px 62px;
+  color: $primaryColor;
+  font-family: "Manrope", sans-serif;
+  &__description {
+    max-width: 1200px;
+    padding-bottom: 32px;
+  }
+  & h3 {
+    padding-bottom: 22px;
+    text-decoration: underline;
+  }
+}
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 88px;
+  width: 100%;
+  &__sisr, &__slam {
+    width: 50%;
+  }
+  & span {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  & h4 {
+    font-weight: 600;
+    padding-bottom: 12px;
+    // text-decoration: underline;
+  }
+  & ul {
+    padding-top: 22px;
+    padding-left: 22px;
+    & li {
+      list-style: square;
+    }
+  }
+}

@@ -24,7 +24,13 @@
     display: inline-flex;
     justify-content: space-between;
     flex-direction: column;
+    color: $primaryColor;
     transition: background-color 0.3s ease;
+    & span,
+    h2,
+    p {
+      color: $primaryColor;
+    }
     @media screen and (max-width: 1500px) {
       padding: 62px 44px;
     }
