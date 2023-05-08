@@ -6,7 +6,7 @@ function Certification() {
       <h1 className="landing__title">Certifications</h1>
       <div className="certification">
         <ul className="certification__list">
-          <li>
+          {/* <li>
             <svg
               width="106"
               height="80"
@@ -39,7 +39,7 @@ function Certification() {
                 fill="#0B632E"
               />
             </svg>
-          </li>
+          </li> */}
           <li>
             <svg
               width="80"
