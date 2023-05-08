@@ -88,8 +88,8 @@ function Monitoring() {
   };
 
   const computerMonitoring = {
-    subtitle: "Veille Informatique",
-    title: "Intelligence artificielle : quels sont les métiers menacés ?",
+    subtitle: "Veille Technologique",
+    title: "Deep Learning : une technologie fondée sur les réseaux neuraux",
     description:
       "Découvrez les métiers menacés par l'Intelligence Artificielle (IA) et l'automatisation des tâches. Cet article examine les secteurs impactés tels que la production, le commerce de détail et les services. Il se penche aussi sur les métiers qui pourraient être transformés ou améliorés par l'IA.",
     article: {
