@@ -16,3 +16,11 @@
     padding-top: 20vh;
   }
 }
+
+.home__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  column-gap: 88px;
+}

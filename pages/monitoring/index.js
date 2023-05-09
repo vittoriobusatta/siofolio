@@ -93,14 +93,8 @@ function Monitoring() {
     subtitle: "Veille Technologique",
     title: "Deep Learning : une technologie fondée sur les réseaux neuraux",
     description:
-      "Découvrez les métiers menacés par l'Intelligence Artificielle (IA) et l'automatisation des tâches. Cet article examine les secteurs impactés tels que la production, le commerce de détail et les services. Il se penche aussi sur les métiers qui pourraient être transformés ou améliorés par l'IA.",
+      "Le Deep learning  ou apprentissage profond est l’une des technologies principales du Machine learning. Avec le Deep Learning, nous parlons d’algorithmes capables de mimer les actions du cerveau humain grâce à des réseaux de neurones artificielles.  Les réseaux sont composés de dizaines voire de centaines de « couches » de neurones, chacune recevant et interprétant les informations de la couche précédente.",
     link: "https://ribbon-fight-d52.notion.site/Veilles-840fd1f47ddf4e1e8b1c10f1b133a464",
-    article: {
-      title:
-        "Les enjeux éthiques de l’utilisation de l’intelligence artificielle ",
-      description:
-        "L’utilisation de l’IA au quotidien soulève de nombreuses questions éthiques étroitement liées au droit car il est le garant de la protection des droits fondamentaux et qu’il est le seul à pouvoir limiter ou interdire certaines pratiques. Aujourd’hui, les risques sont nombreux : injustice algorithmique, systèmes opaques, programmes racistes et sexistes, discriminations, impacts sur le travail, désinformation, atteintes à la vie privée, atteintes à la sécurité, surveillance des utilisateurs. Ces risques sont présents dans de nombreux domaines (environnement, santé, énergie, justice, droit, police, transport, économie et bien d’autres) et touchent, de fait, une grande partie des utilisateurs.",
-    },
   };
 
   const array = [computerMonitoring, legalMonitoring];

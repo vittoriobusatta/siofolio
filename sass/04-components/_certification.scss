@@ -21,32 +21,32 @@
       & svg path, & svg rect {
         transition: fill 0.3s ease;
       }
-      &:hover {
-        background-color: $primaryColor;
-        &:nth-child(1) svg path {
-          fill: $backgroundColor;
-        }
-        &:nth-child(2) svg {
-          fill: $backgroundColor;
-          & path {
-            &:nth-child(1) {
-              fill: $backgroundColor;
-            }
-            &:nth-child(2) {
-              fill: $primaryColor;
-            }
-          }
-        }
-        &:nth-child(3) svg {
-          fill: $backgroundColor;
-          & path {
-            fill: $backgroundColor;
-          }
-          & rect {
-            fill: $primaryColor;
-          }
-        }
-      }
+      // &:hover {
+      //   background-color: $primaryColor;
+      //   &:nth-child(1) svg path {
+      //     fill: $backgroundColor;
+      //   }
+      //   &:nth-child(2) svg {
+      //     fill: $backgroundColor;
+      //     & path {
+      //       &:nth-child(1) {
+      //         fill: $backgroundColor;
+      //       }
+      //       &:nth-child(2) {
+      //         fill: $primaryColor;
+      //       }
+      //     }
+      //   }
+      //   &:nth-child(3) svg {
+      //     fill: $backgroundColor;
+      //     & path {
+      //       fill: $backgroundColor;
+      //     }
+      //     & rect {
+      //       fill: $primaryColor;
+      //     }
+      //   }
+      // }
     }
   }
 }
